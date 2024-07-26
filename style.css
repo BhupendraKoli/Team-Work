@@ -17,6 +17,12 @@
     justify-content: space-evenly;
 }
 
+.nav-signin{
+    a{
+        color: white;
+    }
+}
+
 .nav-logo {
     height: 50px;
     width: 100px;
