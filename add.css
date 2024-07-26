@@ -1,0 +1,41 @@
+.breakp p{
+    line-height: 1;
+    font-size: 12px;
+    columns: #767676;
+    font-weight: 400;
+    position: relative;
+    background-color: #fff;
+    padding: 0 8px 0 7px;
+}
+
+.break, .btn{
+    display: contents;
+    justify-content: center;
+}
+
+.break::before,.breakp::after{
+    content: "";
+    position: relative;
+    top: 5px;
+    display: inline-block;
+    width: 120px;
+    border-top: 1px solid #e7e7e7;
+}
+
+.btn button{
+    width: 348px;
+    height: 31px;
+    margin: 15px auto;
+    background-color: #e7e7e7;
+    background-image: linear-gradient(#f9f9fa, #efefef);
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+}
+
+footer .links{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    margin: 25px auto 15px auto;
+}
