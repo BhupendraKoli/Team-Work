@@ -17,8 +17,8 @@
     justify-content: space-evenly;
 }
 
-.nav-signin{
-    a{
+.nav-signin {
+    a {
         color: white;
     }
 }
@@ -126,81 +126,87 @@ span {
     font-size: 0.85rem;
 }
 
-.panel-options ul{
-   padding: 0;
-   margin: 0;
-   display: flex;
-   align-items: center;
-   height: 100%;
-   font-size: 1rem;
-   color: white;
-   list-style: none;
+.panel-options ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 1rem;
+    color: white;
+    list-style: none;
 }
 
-.panel-options ul li a{
+.panel-options ul li a {
     color: white;
     text-decoration: none;
     padding: 0 5px;
 }
 
-#open-nav-sitebar{
+#open-nav-sitebar {
     cursor: pointer;
 }
 
 
-.sidebar-container-navigation{
+.sidebar-container-navigation {
     position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgb(0,0,0,0.7);
+    background: rgb(0, 0, 0, 0.7);
     transform: translate(-100%);
     display: flex;
 
 }
-.slidebar-show{
+
+.slidebar-show {
     transform: translate(0);
 }
-.slidbar-left-part{
+
+.slidbar-left-part {
     background-color: white;
     width: 365px;
     height: 100%;
 }
 
-.sidebar-top{
+.sidebar-top {
     display: flex;
     align-items: center;
-  
+
     padding: 12px;
     padding-left: 30px;
-    background-color: rgb(19,25,33);
+    background-color: rgb(19, 25, 33);
     color: white;
 
 }
-.sidebar-top h2{
+
+.sidebar-top h2 {
     margin: 0;
     font-size: 22px;
 }
-.sidebar-top i{
+
+.sidebar-top i {
     padding-right: 10px;
     font-size: 22px;
 }
 
-.sidebar-item{
+.sidebar-item {
     padding-left: 30px;
-    border-top:1.5px solid #ccc ;
+    border-top: 1.5px solid #ccc;
 
 }
-.sidebar-item h2{
+
+.sidebar-item h2 {
     font-size: 20px;
 }
-.sidebar-item p{
+
+.sidebar-item p {
     color: #505c5f;
 }
 
-#sidebar-navigation-close{
-    background-color:transparent;
+#sidebar-navigation-close {
+    background-color: transparent;
     align-self: flex-start;
     font-size: 30px;
     border: none;
@@ -211,40 +217,23 @@ span {
 }
 
 
-/** hero sectrion **/
-.hero-section {
-    background-image: url('/Images/hero_image.jpg');
-    background-size: cover;
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
 /** Carousel **/
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-
-}
 
 .carousel {
     width: 100%;
-    max-width: 1200px; /* Limit carousel width */
-    height: 250px; /* Adjust height as needed */
+    max-width: 1200px;
+    height: 250px;
     overflow: hidden;
     position: relative;
-    margin: 0 auto; /* Center align the carousel */
+    margin: 0 auto;
 }
 
 .carousel img {
     display: block;
     width: 100%;
     height: auto;
-    max-width: 100%; /* Ensure images do not exceed container width */
-    max-height: 100%; /* Ensure images do not exceed container height */
+    max-width: 100%;
+    max-height: 100%;
     opacity: 0;
     transition: opacity 1s ease;
     position: absolute;
@@ -252,49 +241,61 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    margin: auto; /* Center align the image */
+    margin: auto;
 }
 
 .carousel img.active {
     opacity: 1;
-    z-index: 1; /* Ensure active image is above others */
+    z-index: 1;
 }
 
 /* Animation for sliding effect */
 @keyframes slide {
-    0%, 16.666% {
+
+    0%,
+    16.666% {
         opacity: 0;
     }
-    20%, 36.666% {
+
+    20%,
+    36.666% {
         opacity: 1;
     }
-    40%, 100% {
+
+    40%,
+    100% {
         opacity: 0;
     }
 }
 
 .carousel img:nth-child(1) {
-    animation: slide 18s infinite 0s; /* Adjust animation speed (total duration) */
+    animation: slide 18s infinite 0s;
+    /* Adjust animation speed (total duration) */
 }
 
 .carousel img:nth-child(2) {
-    animation: slide 18s infinite 3s; /* Adjust animation speed (total duration) */
+    animation: slide 18s infinite 3s;
+    /* Adjust animation speed (total duration) */
 }
 
 .carousel img:nth-child(3) {
-    animation: slide 18s infinite 6s; /* Adjust animation speed (total duration) */
+    animation: slide 18s infinite 6s;
+    /* Adjust animation speed (total duration) */
 }
 
 .carousel img:nth-child(4) {
-    animation: slide 18s infinite 9s; /* Adjust animation speed (total duration) */
+    animation: slide 18s infinite 9s;
+    /* Adjust animation speed (total duration) */
 }
 
 .carousel img:nth-child(5) {
-    animation: slide 18s infinite 12s; /* Adjust animation speed (total duration) */
+    animation: slide 18s infinite 12s;
+    /* Adjust animation speed (total duration) */
 }
 
 .carousel img:nth-child(6) {
-    animation: slide 18s infinite 15s; /* Adjust animation speed (total duration) */
+    animation: slide 18s infinite 15s;
+    /* Adjust animation speed (total duration) */
 }
 
 
