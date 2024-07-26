@@ -125,33 +125,81 @@ span {
     margin-left: 10px;
 }
 
-/** hero sectrion **/
-.hero-section {
-    background-image: url('/Images/hero_image.jpg');
-    background-size: cover;
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+/** Carousel **/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.hero-msg {
-    height: 40px;
-    background-color: white;
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.85rem;
-    width: 90%;
-    margin-bottom: 25px;
-    border-radius: 30px;
+.carousel {
+    width: 100%;
+    max-width: 1200px; /* Limit carousel width */
+    height: 250px; /* Adjust height as needed */
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto; /* Center align the carousel */
 }
 
-.hero-msg a {
-    text-decoration: none;
-    color: #007185;
+.carousel img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Ensure images do not exceed container width */
+    max-height: 100%; /* Ensure images do not exceed container height */
+    opacity: 0;
+    transition: opacity 1s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; /* Center align the image */
 }
+
+.carousel img.active {
+    opacity: 1;
+    z-index: 1; /* Ensure active image is above others */
+}
+
+/* Animation for sliding effect */
+@keyframes slide {
+    0%, 16.666% {
+        opacity: 0;
+    }
+    20%, 36.666% {
+        opacity: 1;
+    }
+    40%, 100% {
+        opacity: 0;
+    }
+}
+
+.carousel img:nth-child(1) {
+    animation: slide 18s infinite 0s; /* Adjust animation speed (total duration) */
+}
+
+.carousel img:nth-child(2) {
+    animation: slide 18s infinite 3s; /* Adjust animation speed (total duration) */
+}
+
+.carousel img:nth-child(3) {
+    animation: slide 18s infinite 6s; /* Adjust animation speed (total duration) */
+}
+
+.carousel img:nth-child(4) {
+    animation: slide 18s infinite 9s; /* Adjust animation speed (total duration) */
+}
+
+.carousel img:nth-child(5) {
+    animation: slide 18s infinite 12s; /* Adjust animation speed (total duration) */
+}
+
+.carousel img:nth-child(6) {
+    animation: slide 18s infinite 15s; /* Adjust animation speed (total duration) */
+}
+
 
 /** shop section **/
 .shop-section {
