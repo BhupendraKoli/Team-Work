@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amazon</title>
+    <script src="lang.js" async></script>
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -17,188 +18,26 @@
   </head>
 
   <body>
-    <header>
-      <div class="header">
-        <div class="navbar">
-          <div class="nav-logo">
-            <a href="https://www.amazon.in/ref=nav_logo">
-            <div class="logo"></div> </a>
-          </div>
-
-        <div class="nav-address">
-          <p class="add-first" data-translate="deliver-to">Deliver to</p>
-          <div class="add-icon">
-            <i class="fa-solid fa-location-crosshairs"></i>
-            <p class="add-second" data-translate="location">India</p>
-          </div>
-        </div>
-
-        <div class="nav-search">
-          <select class="search-select">
-            <option selected="selected">All</option>
-            <option>Arts &amp; Crafts</option>
-            <option>Automotive</option>
-            <option>Baby</option>
-            <option>Beauty &amp; Personal Care</option>
-            <option>Books</option>
-            <option>Boys' Fashion</option>
-            <option>Computers</option>
-            <option>Deals</option>
-            <option>Digital Music</option>
-            <option>Electronics</option>
-            <option>Girls' Fashion</option>
-            <option>Health &amp; Household</option>
-            <option>Home &amp; Kitchen</option>
-            <option>Industrial &amp; Scientific</option>
-            <option>Kindle Store</option>
-            <option>Luggage</option>
-            <option>Men's Fashion</option>
-            <option>Movies &amp; TV</option>
-            <option>Music, CDs &amp; Vinyl</option>
-            <option>Pet Supplies</option>
-            <option>Prime Video</option>
-            <option>Software</option>
-            <option>Sports &amp; Outdoors</option>
-            <option>Tools &amp; Home Improvement</option>
-            <option>Toys &amp; Games</option>
-            <option>Video Games</option>
-            <option>Women's Fashion</option>
-          </select>
-          <input class="search-input" type="text" placeholder="Search...." />
-          <i class="fa-solid fa-magnifying-glass search-icon"></i>
-        </div>
-        <!-- changeLanguage -->
-        <div class="nav-language">
-          <i class="fa-solid fa-globe"></i>
-          <span>
-            <p id="languageSwitcher" onchange="changeLanguage()">Lang</p>
-            ></span
-          >
-        </div>
-
-        <div class="nav-signin">
-          <p>
-            <span> <a href="add.html" data-translate="signin">Sing in</a></span>
-          </p>
-          <p class="nav-second">
-            <span data-translate="account-lists">Account & Lists</span>
-            <i class="fa-sharp fa-solid fa-circle-chevron-down"></i>
-          </p>
-        </div>
-        <div class="nav-returns">
-          <a href="Return&Order.html"><p><span   class="cart"  data-translate="returns">Returns</span></p>
-          <p class="nav-second">
-            <span class="cart" data-translate="orders">& Orders</span>
-            <i class="fa-sharp fa-solid fa-circle-chevron-down"></i>
-          </p></a>
-        </div>
-
-        <div class="nav-cart">
-          <i class="fa-solid fa-cart-shopping"></i>
-         <a href="cart.html"> <span class="cart" data-translate="cart">Cart</span></a>
-        </div>
-      </div>
-
-      <div class="bottom-panel">
-        <div class="panel-alt" id="open-nav-sitebar">
-          <i class="fa-solid fa-bars"></i>
-          <span data-translate="all">All</span>
-        </div>
-        <div class="panel-options">
-          <ul>
-            <li><a href="health.html" data-translate="best-sellers">Best Sellers</a></li>
-            <li><a href="Fashion.html" data-translate="todays-deals">Today's Deals</a></li>
-            <li><a href="moblie.html" data-translate="mobiles">Mobiles</a></li>
-            <li>
-              <a href="https://www.amazon.in/gp/help/customer/display.html?nodeId=200507590&ref_=nav_cs_help" data-translate="customer-service">Customer Service</a>
-            </li>
-            <li><a href="moblie.html" data-translate="electronics">Electronics</a></li>
-            <li>
-              <a href="Furniture.html" data-translate="home-kitchen">Home & Kitchen</a>
-            </li>
-            <li><a href="Fashion.html" data-translate="fashion">Fashion</a></li>
-            <li><a href="https://www.amazon.in/Books/b/?ie=UTF8&node=976389031&ref_=nav_cs_books" data-translate="books">Books</a></li>
-            <li><a href="https://www.primevideo.com/offers/nonprimehomepage/ref=atv_dl_rdr" data-translate="prime">Prime</a></li>
-          </ul>
-        </div>
-        <div class="panel-deals" data-translate="shop-deals">
-          Shop deals in Electronics
-        </div>
-      </div>
-    </header>
+    <div include-html="header.html"></div>
+    <div class="nav-language">
+      <i class="fa-solid fa-globe"></i>
+      <span>
+        <p id="languageSwitcher" onclick="console.log(this.id)" onchange="changeLanguage()">Lang</p>
+        </span>
+    </div>
 
     <!-- Carousel -->
-     <a href="https://www.amazon.in/ref=nav_logo">
-
-    <div class="carousel">
-      <img src="amazone 0.jpg" alt="media 1" />
-      <img src="amazone 0.jpg" alt="media 1" />
-      <img src="amazone 1.jpg" alt="media 2" />
-      <img src="amazone 2.jpg" alt="media 3" />
-      <img src="amazone 3.jpg" alt="media 4" />
-      <img src="amazone 4.jpg" alt="media 5" />
-      <img src="amazone 5.jpg" alt="media 6" />
-    </div>
-  </a>
-
-    <div
-      class="sidebar-container-navigation"
-      id="sidebar-container-navigation-id"
-    >
-      <div class="slidbar-left-part">
-        <div class="sidebar-top">
-          <i class="fa-solid fa-user-large"></i>
-          <h2>
-            <span data-translate="hello">Hello, </span
-            ><span data-translate="signin">Sign in</span>
-          </h2>
-        </div>
-
-        <div class="sidebar-item">
-          <h2 data-translate="trending">Trending</h2>
-          <p data-translate="best-seller">Best Seller</p>
-          <p data-translate="new-releases">New Releases</p>
-          <p data-translate="movers-shakers">Movers and Shakers</p>
-        </div>
-
-        <div class="sidebar-item">
-          <h2 data-translate="digital-content">Digital Content And Devices</h2>
-          <p data-translate="echo-alexa">Echo & Alexa</p>
-          <p data-translate="fire-tv">Fire TV</p>
-          <p data-translate="kindle">Kindle E-Reader & eBook</p>
-          <p data-translate="audible">Audible Audiobook</p>
-          <p data-translate="prime-video">Amazon Prime Video</p>
-          <p data-translate="prime-music">Amazon Prime Music</p>
-        </div>
-
-        <div class="sidebar-item">
-          <h2 data-translate="shop-category">Shop By Category</h2>
-          <p data-translate="mobiles-computers">Mobiles, Computers</p>
-          <p data-translate="mens-fashion">Men's Fashion</p>
-          <p data-translate="womens-fashion">Women's Fashion</p>
-          <p data-translate="audible">Audible Audiobook</p>
-          <p data-translate="see-all">See All</p>
-        </div>
-
-        <div class="sidebar-item">
-          <h2 data-translate="program-features">Program & Features</h2>
-          <p data-translate="gift-card">Gift Card & Mobile Recharge</p>
-          <p data-translate="flight-ticket">Flight Ticket</p>
-          <p data-translate="found-it">#FoundIt - On Amazon</p>
-          <p data-translate="clearance-storage">Clearance Storage</p>
-        </div>
-
-        <div class="sidebar-item">
-          <h2 data-translate="help-settings">Help & Settings</h2>
-          <p data-translate="your-account">Your Account</p>
-          <p data-translate="customer-service">Customer Service</p>
-          <p data-translate="signin">Sign in</p>
-        </div>
+    <a href="https://www.amazon.in/ref=nav_logo">
+      <div class="carousel">
+        <img src="amazone 0.jpg" alt="media 1" />
+        <img src="amazone 0.jpg" alt="media 1" />
+        <img src="amazone 1.jpg" alt="media 2" />
+        <img src="amazone 2.jpg" alt="media 3" />
+        <img src="amazone 3.jpg" alt="media 4" />
+        <img src="amazone 4.jpg" alt="media 5" />
+        <img src="amazone 5.jpg" alt="media 6" />
       </div>
-      <button id="sidebar-navigation-close">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-    </div>
+    </a>
     <!-- 1 -->
 
     <div class="shop-section">
@@ -306,126 +145,8 @@
         </div>
       </div>
     </div>
-    <footer>
-      <a href="#"><div class="foot-panel1" data-translate="back-top">Back to Top</div></a>
-
-      <div class="foot-panel2">
-        <ul>
-          <li data-translate="get-know-us">Get to Know Us</li>
-          <li><a href="#" data-translate="careers">Careers</a></li>
-          <li><a href="#" data-translate="newsletter">Amazon Newsletter</a></li>
-          <li><a href="#" data-translate="about-amazon">About Amazon</a></li>
-          <li><a href="#" data-translate="accessibility">Accessibility</a></li>
-          <li>
-            <a href="#" data-translate="sustainability">Sustainability</a>
-          </li>
-          <li><a href="#" data-translate="press-center">Press Center</a></li>
-          <li>
-            <a href="#" data-translate="investor-relations"
-              >Investor Relations</a
-            >
-          </li>
-          <li>
-            <a href="#" data-translate="amazon-devices">Amazon Devices</a>
-          </li>
-          <li>
-            <a href="#" data-translate="amazon-science">Amazon Science</a>
-          </li>
-        </ul>
-        <ul>
-          <li data-translate="make-money">Make Money with Us</li>
-          <li>
-            <a href="#" data-translate="sell-products"
-              >Sell products on Amazon</a
-            >
-          </li>
-          <li>
-            <a href="#" data-translate="sell-business"
-              >Sell on Amazon Business</a
-            >
-          </li>
-          <li>
-            <a href="#" data-translate="sell-apps">Sell apps on Amazon</a>
-          </li>
-          <li>
-            <a href="#" data-translate="become-affiliate"
-              >Become an Affiliate</a
-            >
-          </li>
-          <li>
-            <a href="#" data-translate="advertise-products"
-              >Advertise Your Products</a
-            >
-          </li>
-          <li>
-            <a href="#" data-translate="self-publish">Self-Publish with Us</a>
-          </li>
-          <li><a href="#" data-translate="host-hub">Host an Amazon Hub</a></li>
-          <li>
-            <a href="#" data-translate="see-more-money"
-              >See More Make Money with Us</a
-            >
-          </li>
-        </ul>
-        <ul>
-          <li data-translate="payment-products">Amazon Payment Products</li>
-          <li>
-            <a href="#" data-translate="business-card">Amazon Business Card</a>
-          </li>
-          <li><a href="#" data-translate="shop-points">Shop with Points</a></li>
-          <li>
-            <a href="#" data-translate="reload-balance">Reload Your Balance</a>
-          </li>
-          <li>
-            <a href="#" data-translate="currency-converter"
-              >Amazon Currency Converter</a
-            >
-          </li>
-        </ul>
-        <ul>
-          <li data-translate="help-you">Let Us Help You</li>
-          <li><a href="#" data-translate="covid-19">Amazon and COVID-19</a></li>
-          <li><a href="#" data-translate="your-account">Your Account</a></li>
-          <li><a href="#" data-translate="your-orders">Your Orders</a></li>
-          <li>
-            <a href="#" data-translate="shipping-rates"
-              >Shipping Rates & Policies</a
-            >
-          </li>
-          <li>
-            <a href="#" data-translate="returns-replacements"
-              >Return & Replacements</a
-            >
-          </li>
-          <li>
-            <a href="#" data-translate="content-devices"
-              >Manage Your Content and Devices</a
-            >
-          </li>
-          <li>
-            <a href="#" data-translate="amazon-assistant">Amazon Assistant</a>
-          </li>
-          <li><a href="#" data-translate="help">Help</a></li>
-        </ul>
-      </div>
-
-      <div class="foot-panel3">
-        <div class="logo"></div>
-      </div>
-
-      <div class="foot-panel4">
-        <div class="pages">
-          <a href="https://www.amazon.in/gp/help/customer/display.html?nodeId=GLSBYFE9MGKKQXXM&ref_=footer_cou" data-translate="conditions">Conditions of Use</a>
-          <a href="https://www.amazon.in/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ&ref_=footer_privacy" data-translate="privacy-notice">Privacy Notice</a>
-          <a href="https://www.amazon.in/gp/help/customer/display.html?nodeId=G64JFZVFDY66XG9K&ref_=footer_iba" data-translate="ads-privacy">Intrest Based-Apps</a>
-        </div>
-        <div class="copyright">
-          © 1996-2023, Amazon.com, Inc. or its affiliates
-        </div>
-      </div>
-    </footer>
-
-    <script src="scrip.js"></script>
+    <div include-html="footer.html"></div>
     <script src="lang.js"></script>
+    <script src="master.js"></script>
   </body>
 </html>
