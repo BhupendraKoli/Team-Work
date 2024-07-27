@@ -87,7 +87,7 @@ const translations = {
         "privacy-notice": "Privacy Notice",
         "ads-privacy": "Your Ads Privacy Choices"
     },
-    hi: {
+    mr: {
             "deliver-to": "वितरण करा",
             "location": "भारत",
             "signin": "साइन इन करा",
@@ -192,7 +192,7 @@ function translatePage(language) {
 
 document.querySelector('.nav-language').addEventListener('click', () => {
     const currentLang = document.querySelector('.nav-language').getAttribute('data-lang');
-    const newLang = currentLang === 'en' ? 'hi' : 'en'; 
+    const newLang = currentLang === 'en' ? 'mr' : 'en'; 
     document.querySelector('.nav-language').setAttribute('data-lang', newLang);
     document.querySelector('.nav-language span').textContent = newLang.toUpperCase();
     translatePage(newLang);
