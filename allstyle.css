@@ -302,30 +302,31 @@ li a:hover {
     margin-top: 5px;
     font-size: 0.8rem;
 }
+
 .row {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
-  }
-  
-  .col-2 {
+}
+
+.col-2 {
     flex-basis: 50%;
     min-width: 300px;
-  }
-  
-  .col-2 img {
+}
+
+.col-2 img {
     max-width: 100%;
     padding: 50px 0;
-  }
-  
-  .col-2 h1 {
+}
+
+.col-2 h1 {
     font-size: 50px;
     line-height: 60px;
     margin: 25px 0;
-  }
-  
-  .btn {
+}
+
+.btn {
     display: inline-block;
     background: #ff523b;
     color: #ffffff;
@@ -333,50 +334,72 @@ li a:hover {
     margin: 30px 0;
     border-radius: 30px;
     transition: background 0.5s;
-  }
-  
-  .btn:hover {
+}
+
+.btn:hover {
     background: #563434;
-  }
-  
-  .header {
+}
+
+.header {
     background: radial-gradient(#fff, #ffd6d6);
-  }
-  
-  .header .row {
+}
+
+.header .row {
     margin-top: 70px;
-  }
-  
-  .categories {
+}
+
+.categories {
     margin: 70px 0;
-  }
-  
-  .col-3 {
+}
+
+.col-3 {
     flex-basis: 30%;
     min-width: 250px;
     margin-bottom: 30px;
-  }
-  
-  .col-3 img {
+}
+
+.col-3 img {
     width: 100%;
-  }
-  
-  .small-container {
+}
+
+.small-container {
     max-width: 1080px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
-  }
-  
-  .col-4 {
+}
+
+.box {
+    display: flex;
+    width: 300px;
+    height: 400px;
+    background-color: aliceblue;
+    margin: 1em;
+    margin-top: 5em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px;
+    margin: 1em;
+}
+
+img {
+    width: 500px;
+    height: 250px;
+}
+
+
+.col-4 {
     flex-basis: 25%;
     padding: 10px;
-    min-width: 200px;
+    min-width: 300px;
     margin-bottom: 50px;
     transition: transform 0.5s;
-    border-radius: 10px;
-  }
-  
-  .col-4 img {
+}
+
+.col-4 img {
     width: 100%;
-  }
+}
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+    }
+}
