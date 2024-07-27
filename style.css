@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+.header {
+    position: sticky;
+}
+
 /** navbar **/
 .navbar {
     height: 60px;
@@ -15,6 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .nav-signin {
@@ -25,11 +30,11 @@
 
 .nav-logo {
     height: 50px;
-    width: 100px;
+    width: 180px;
 }
 
 .logo {
-    background-image: url(/Images/amazon_logo.png);
+    background-image: url(https://zeevector.com/wp-content/uploads/LOGO/Amazon-India-Logo-PNG-White2.png);
     height: 50px;
     width: 100%;
     background-size: cover;
@@ -129,6 +134,7 @@ span {
 .panel-options ul {
     padding: 0;
     margin: 0;
+    margin-bottom: 0.6em;
     display: flex;
     align-items: center;
     height: 100%;
@@ -141,6 +147,11 @@ span {
     color: white;
     text-decoration: none;
     padding: 0 5px;
+}
+
+.panel-deals{
+    font-size: 1rem;
+    margin-bottom: 0.1em;
 }
 
 #open-nav-sitebar {
@@ -419,4 +430,75 @@ li a:hover {
 .copyright {
     margin-top: 5px;
     font-size: 0.8rem;
+}
+
+@media (max-width: 1200px) {
+    .nav-search {
+        width: 500px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        height: auto;  
+    }
+    .panel-deals , .panel-alt{
+        float:inline-end;
+    }
+
+    .panel-options{
+        display: none;
+    }
+
+    .nav-search {
+        width: 80%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .box {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-search {
+        width: 100%;
+    }
+
+    .panel-options{
+        display: none;
+    }
+
+    .search-select,
+    .search-icon {
+        display: none;
+    }
+
+    .search-input {
+        width: 100%;
+        border-radius: 30px;
+        border: 2px solid #febd68;
+        padding: 10px;
+    }
+
+    .box {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        align-items: center;
+    }
+
+    .panel-options{
+        display: none;
+    }
+
+    .nav-search {
+        width: 100%;
+        margin: 10px 0;
+    }
 }
