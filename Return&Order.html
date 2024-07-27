@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order and Return System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 60px;
+            border: 2px solid gray;
+            border-radius: 10px;
+            background-color: #ebebeb44;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            
+        }
+        button{
+            background-color: #febd68;
+        }
+        h1 {
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Order and Return System</h1>
+        
+        <h2>Place an Order</h2>
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="product">Product:</label>
+                <input type="text" id="product" name="product" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+            </div>
+            <button type="submit">Place Order</button>
+        </form>
+        
+        <h2>Request a Return</h2>
+        <form id="returnForm">
+            <div class="form-group">
+                <label for="orderId">Order ID:</label>
+                <input type="text" id="orderId" name="orderId" required>
+            </div>
+            <div class="form-group">
+                <label for="reason">Reason for Return:</label>
+                <select id="reason" name="reason" required>
+                    <option value="">Select a reason</option>
+                    <option value="Defective">Defective</option>
+                    <option value="Wrong Item">Wrong Item</option>
+                    <option value="No Longer Needed">No Longer Needed</option>
+                </select>
+            </div>
+            <button type="submit">Request Return</button>
+        </form>
+        
+        <div id="message"></div>
+    </div>
+
+ <!-- order and return system  -->
+
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const product = document.getElementById('product').value;
+            const quantity = document.getElementById('quantity').value;
+            // Send data to server
+            fetch('/api/orders', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ product, quantity })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('message').innerText = `Order placed successfully: ${data.orderId}`;
+            })
+            .catch(error => {
+                document.getElementById('message').innerText = `Error placing order: ${error.message}`;
+            });
+        });
+
+        document.getElementById('returnForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const orderId = document.getElementById('orderId').value;
+            const reason = document.getElementById('reason').value;
+            // Send data to server
+            fetch('/api/returns', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ orderId, reason })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('message').innerText = `Return requested successfully: ${data.returnId}`;
+            })
+            .catch(error => {
+                document.getElementById('message').innerText = `Error requesting return: ${error.message}`;
+            });
+        });
+
+        // -------- 
+
+        const express = require('express');
+const app = express();
+const port = 3000;
+
+app.use(express.json());
+
+app.post('/api/orders', (req, res) => {
+    const { product, quantity } = req.body;
+    // In a real system, you’d save this to a database
+    const orderId = Math.floor(Math.random() * 1000); // Simulate order ID generation
+    res.json({ orderId });
+});
+
+app.post('/api/returns', (req, res) => {
+    const { orderId, reason } = req.body;
+    // In a real system, you’d save this to a database
+    const returnId = Math.floor(Math.random() * 1000); // Simulate return ID generation
+    res.json({ returnId });
+});
+
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+});
+
+    </script>
+    <!-- <script src="script.js"></script -->
+</body>
+</html>

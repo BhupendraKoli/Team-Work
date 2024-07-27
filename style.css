@@ -110,10 +110,16 @@ span {
 
 .nav-cart {
     font-size: 0.7rem;
+    text-decoration: none;
+    color: white;
 }
 
 .nav-cart i {
     font-size: 1.6rem;
+}
+.cart{
+    color: white;
+    text-decoration: underline;
 }
 
 /** bottom panel **/
